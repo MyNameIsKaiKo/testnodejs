@@ -42,7 +42,7 @@ jobs:
         uses: 'azure/aci-deploy@v1'
         with:
           resource-group: ${{ secrets.RESOURCE_GROUP }}
-          dns-name-label: ${{ secrets.RESOURCE_GROUP }}${{ github.run_number }}
+          dns-name-label: ${{ github.ref_name }}-myappLERAY${{ github.run_number }}
           image : testappdev.azurecr.io/test-app-dev:${{ github.sha }}
           registry-login-server: testappdev.azurecr.io
           registry-username: ${{ secrets.ACR_USERNAME }}
