@@ -49,6 +49,8 @@ jobs:
           registry-password: ${{ secrets.ACR_PASSWORD }}
           name : test-app-dev
           location : 'francecentral'
+          
+          #juhuhuh
       
           
           
